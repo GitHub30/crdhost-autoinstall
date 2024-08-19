@@ -65,6 +65,7 @@ if ! is_installed chrome-remote-desktop; then
         echo "deb [arch=amd64] https://dl.google.com/linux/chrome-remote-desktop/deb stable main" \
             | tee -a /etc/apt/sources.list.d/chrome-remote-desktop.list
     fi
+    wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
     apt-get update
     DEBIAN_FRONTEND=noninteractive \
         apt-get install --assume-yes chrome-remote-desktop
