@@ -76,6 +76,9 @@ install_desktop_env
 [[ "$INSTALL_CHROME" = "yes" ]] && ! is_installed google-chrome-stable && \
   download_and_install \
     https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
-    /tmp/google-chrome-stable_current_amd64.deb
+    /tmp/google-chrome-stable_current_amd64.deb && \
+    cp /usr/share/applications/google-chrome.desktop /etc/xdg/autostart/
+
+wget -q https://raw.githubusercontent.com/GitHub30/crdhost-autoinstall/main/45-allow-colord.pkla -P /etc/polkit-1/localauthority/50-local.d
 
 echo "Chrome remote desktop installation completed"
