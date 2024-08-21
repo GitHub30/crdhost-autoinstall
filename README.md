@@ -7,3 +7,11 @@ https://www.reddit.com/r/Ubuntu/comments/15stmwn/how_do_i_suppress_authenticatio
     9  xrandr --addmode DUMMY0 1920x1080_60.00
    10  xrandr --output DUMMY0 --mode 1920x1080_60.00
 ```
+
+# VNC
+
+https://vps-ea.com/tigervnc_novnc/
+
+https://kamino.hatenablog.com/entry/docker_vnc
+
+https://qiita.com/yuito723/items/4f5480d42b2ba8481e7f
