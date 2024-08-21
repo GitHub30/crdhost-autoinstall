@@ -75,7 +75,7 @@ ln -s /usr/share/novnc/vnc.html /usr/share/novnc/index.html
 mkdir -p ~/.vnc
 vncpasswd -f <<< "your_password" > ~/.vnc/passwd
 chmod 600 ~/.vnc/passwd
-DEBIAN_FRONTEND=noninteractive tigervncserver :1 -geometry 1920x1080 -localhost no
+DEBIAN_FRONTEND=noninteractive USER=root tigervncserver :1 -geometry 1920x1080 -localhost no
 websockify -D --web=/usr/share/novnc/ 80 localhost:5901
 
 
