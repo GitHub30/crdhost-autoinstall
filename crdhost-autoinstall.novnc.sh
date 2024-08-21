@@ -72,6 +72,7 @@ wget -q https://raw.githubusercontent.com/GitHub30/crdhost-autoinstall/main/45-a
 
 apt-get --assume-yes install tigervnc-standalone-server novnc websockify
 ln -s /usr/share/novnc/vnc.html /usr/share/novnc/index.html
+mkdir -p ~/.vnc
 vncpasswd -f <<< "your_password" > ~/.vnc/passwd
 chmod 600 ~/.vnc/passwd
 DEBIAN_FRONTEND=noninteractive tigervncserver :1 -geometry 1920x1080 -localhost no
